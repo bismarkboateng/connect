@@ -12,6 +12,7 @@ import Link from "next/link";
 import { useAuthStore } from "@/store/authStore";
 import { useRouter } from "next/navigation";
 import { PopUp } from "@/components/shared/PopUp";
+import OAuthLogin from "@/components/shared/OAuthLogin";
 
 
 const signUpFormSchema = z.object({
@@ -80,7 +81,7 @@ export default function SignUpPage() {
         >
           Create Account
         </h1>
-
+        <OAuthLogin type="Sign up" />
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3">
             <FormField
