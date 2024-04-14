@@ -1,7 +1,8 @@
 interface AuthStoreType {
     signUpState: string,
+    logInState: string,
     isLoggedIn: boolean,
-    logIn: () => void;
+    logIn: (values) => void;
     signUp: (values) => void,
     signOut: () => void,
 }

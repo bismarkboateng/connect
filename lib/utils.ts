@@ -10,3 +10,11 @@ export const handleError = (errorCode: any, errorMessage: any) => {
   // handle this error correctly okay
   console.log(errorCode, errorMessage)
 }
+
+export const authWithGoogle = () => {
+  console.log("Google auth functionality")
+}
+
+export const authWithFacebook = () => {
+  console.log("Facebook auth functionality")
+}

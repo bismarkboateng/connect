@@ -35,7 +35,6 @@ export default function SignUpPage() {
 
   function onSubmit(values: z.infer<typeof signUpFormSchema>) {
     signUp(values)
-    // navigate the user to sign-in page
   }
 
   function handleRetry() {
@@ -52,10 +51,7 @@ export default function SignUpPage() {
      message="Redirecting to sign in page..."
     /> 
     buttonText="Account Created!"
-    // will of course remove this later
-    setTimeout(() => {
-      router.push("/sign-in")
-    }, 1000)
+    router.push("/sign-in")
   } else {
     buttonText = "Create Account"
   }
@@ -84,6 +80,7 @@ export default function SignUpPage() {
         >
           Create Account
         </h1>
+
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3">
             <FormField
