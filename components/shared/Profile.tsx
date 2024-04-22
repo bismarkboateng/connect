@@ -7,9 +7,11 @@ import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { profileSchema } from "@/lib/formSchema"
+import { useAuthStore } from "@/store/authStore"
 
 
 export default function ProfileForm() {
+  const updateUserInfo = useAuthStore(state => state.updateUserInfo)
   const form = useForm<z.infer<typeof profileSchema>>({
     resolver: zodResolver(profileSchema),
     defaultValues: {
@@ -19,8 +21,8 @@ export default function ProfileForm() {
     },
   })
   
-  function onSubmit(values: z.infer<typeof profileSchema>) {
-    console.log(values)
+  const onSubmit = (values: z.infer<typeof profileSchema>) => {
+    updateUserInfo(values)
   }
     
     

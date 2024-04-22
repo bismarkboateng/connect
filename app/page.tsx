@@ -9,9 +9,9 @@ const User = JSON.parse(localStorage.getItem("User")!)
 export default function HomePage() {
   const router = useRouter()
 
-    if (!User) {
-      router.push("/sign-up")
-    }
+  if (!User) {
+    router.push("/sign-up")
+  }
 
   return (
     <main>

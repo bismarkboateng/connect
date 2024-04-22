@@ -5,6 +5,8 @@ interface AuthStoreType {
     logIn: (values) => void;
     signUp: (values) => void,
     signOut: () => void,
+    updateUserInfo: (values) => void,
+    updateUserEmail: (values) => void,
 }
 
 interface UserStoreType {

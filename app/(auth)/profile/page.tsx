@@ -1,31 +1,11 @@
-import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import Image from "next/image"
-import { MdMenuOpen } from "react-icons/md";
 import ProfilePhoto from "@/public/user-photo.png"
 import Profile from "@/components/shared/Profile"
-
 
 
 export default function ProfilePage() {
   return (
     <section>
-     <Sheet>
-      <SheetTrigger className="m-4">
-       <div>
-        <MdMenuOpen fontSize={24} />
-       </div>
-      </SheetTrigger>
-      <SheetContent>
-       <SheetHeader>
-        <SheetTitle>Are you absolutely sure?</SheetTitle>
-        <SheetDescription>
-         This action cannot be undone. This will permanently delete your account
-         and remove your data from our servers.
-        </SheetDescription>
-       </SheetHeader>
-      </SheetContent>
-     </Sheet>
-
      <section>
       <h1 className="text-[#2D2C3C] text-xl lg:text-3xl font-bold leading-[48.76px]
       text-center">Account Information</h1>

@@ -9,3 +9,9 @@ export const profileSchema = z.object({
   address: z.string().min(2).max(100),
   city: z.string().min(2).max(100),
 })
+
+
+export const resetEmailSchema = z.object({
+  newEmail: z.string().email(),
+  confirmEmail: z.string().email()
+})

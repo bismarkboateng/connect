@@ -49,4 +49,12 @@ export const useAuthStore = create<AuthStoreType>((set) => ({
 
   },
 
+  updateUserInfo: (values) => {
+    console.log(values)
+  },
+
+  updateUserEmail: (values) => {
+    console.log(values)
+  }
+
 }))
